@@ -1,0 +1,8 @@
+{
+  "name": "Remix CivilContractors",
+  "description": "Imported from GitHub: amari-stack/CivilContractors",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

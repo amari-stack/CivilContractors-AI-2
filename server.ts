@@ -334,10 +334,11 @@ async function startApp() {
     });
   });
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`LA Contractors Full-Stack Server listening on port ${PORT}`);
-  });
-}
+  const PORT = Number(process.env.PORT) || 10000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server is running on port ${PORT}.`);
+});
 
 startApp().catch((err) => {
   console.error("Failed to start server:", err);

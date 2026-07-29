@@ -286,59 +286,27 @@ app.post("/api/gemini/generate", async (req: Request, res: Response) => {
 // Vite Middleware / Static Serving
 // --------------------------------------------------
 
-async function startApp() {
-  if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
-    app.use(vite.middlewares);
-  } else {
-    app.use(
-      "/assets",
-      express.static(path.join(distPath, "assets"), {
-        maxAge: "1y",
-        immutable: true,
-      })
+async function startServer(): Promise<void> {
+  const mongoUri =
+    process.env.MONGODB_URI ||
+    process.env.MONGODB_URL;
+
+  if (!mongoUri) {
+    throw new Error(
+      "MongoDB is not configured. Add MONGODB_URI in Render."
     );
-    app.use(express.static(distPath));
-    app.get("*", (req: Request, res: Response, next: NextFunction) => {
-      if (req.path.startsWith("/api/")) {
-        return next();
-      }
-      res.sendFile(path.join(distPath, "index.html"));
-    });
   }
 
-  // Error Handler
-  app.use((err: any, req: Request, res: Response, _next: NextFunction) => {
-    if (
-      err?.name === "MongooseError" ||
-      err?.name === "MongoNetworkError" ||
-      (err?.message && err.message.includes("buffering timed out"))
-    ) {
-      console.warn("[AI Studio] Database error caught in error handler.");
-      if (req.method === "GET" && req.path.startsWith("/api/")) {
-        return res.json([]);
-      }
-      return res.status(503).json({
-        success: false,
-        message: "Service temporarily operating with offline fallback.",
-      });
-    }
+  await mongoose.connect(mongoUri);
 
-    console.error("Server error:", err);
-    res.status(err.statusCode || 500).json({
-      success: false,
-      message: err.message || "An unexpected server error occurred.",
-    });
+  console.log("Connected to MongoDB.");
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server is running on port ${PORT}.`);
   });
+}
 
- const PORT = Number(process.env.PORT) || 10000;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server is running on port ${PORT}.`);
-});
-
-startApp().catch((err) => {
-  console.error("Failed to start server:", err);
+startServer().catch((error: unknown) => {
+  console.error("Server startup failed:", error);
+  process.exit(1);
 });

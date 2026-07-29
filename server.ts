@@ -22,7 +22,13 @@ const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
 const currentDir = typeof __dirname !== "undefined" ? __dirname : path.dirname(fileURLToPath(import.meta.url || "file://"));
-const distPath = path.join(currentDir, "dist");
+const distPath = path.resolve(process.cwd(), "dist");
+
+app.use(express.static(distPath));
+
+app.get("/{*splat}", (req, res) => {
+  res.sendFile(path.join(distPath, "index.html"));
+});
 
 // --------------------------------------------------
 // Security and CORS

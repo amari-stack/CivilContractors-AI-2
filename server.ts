@@ -24,10 +24,24 @@ const PORT = Number(process.env.PORT) || 3000;
 const currentDir = typeof __dirname !== "undefined" ? __dirname : path.dirname(fileURLToPath(import.meta.url || "file://"));
 const distPath = path.resolve(process.cwd(), "dist");
 
-app.use(express.static(distPath));
+console.log("Serving frontend from:", distPath);
 
-app.get("/{*splat}", (req, res) => {
-  res.sendFile(path.join(distPath, "index.html"));
+app.use(
+  express.static(distPath, {
+    fallthrough: true,
+  })
+);
+
+app.get("/{*splat}", (req, res, next) => {
+  if (req.path.startsWith("/api/")) {
+    return next();
+  }
+
+  res.sendFile(path.join(distPath, "index.html"), (error) => {
+    if (error) {
+      next(error);
+    }
+  });
 });
 
 // --------------------------------------------------

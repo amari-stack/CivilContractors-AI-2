@@ -85,8 +85,8 @@ export const App: React.FC = () => {
         <Services onBookService={handleBookServiceDirect} />
         <Pricing onLockInEstimate={handleLockInEstimate} />
         <Work />
-        <FAQ />
         <Contact preFill={preFill} onClearPreFill={() => setPreFill(null)} />
+        <FAQ />
       </main>
 
       <Footer onNavigate={handleNavigate} />

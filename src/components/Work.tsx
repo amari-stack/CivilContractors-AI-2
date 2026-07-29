@@ -7,48 +7,48 @@ import { ImageWithSkeleton } from './ImageWithSkeleton';
 const portfolioItems: PortfolioItem[] = [
   {
     id: 'p1',
-    title: 'Brooksville Shopping Center Base',
-    description: 'Mass earth excavation, structural stabilization, and base preparation for a 12,000 sq ft retail pad.',
-    category: 'Site Work',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80',
-    location: 'South Broad St, Brooksville',
-    date: 'March 2026'
+    title: "Dave & Buster's Tampa Trench Excavation",
+    description: 'Heavy CAT excavator trenching and underground utility pipe installation with ground crew.',
+    category: 'Underground Pipe',
+    image: '/images/dave_busters_trench_1785361364654.jpg',
+    location: 'Tampa, FL',
+    date: 'February 2026'
   },
   {
     id: 'p2',
-    title: 'Oak Hills Storm Drainage Install',
-    description: 'Laying 1,800 linear feet of 36-inch Reinforced Concrete Piping (RCP) to mitigate local regional flooding.',
-    category: 'Underground Pipe',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
-    location: 'Oak Hills Subdivision, FL',
-    date: 'January 2026'
+    title: "Dave & Buster's Tampa Commercial Site Prep",
+    description: 'Aerial overview of commercial site prep, precast concrete structures, and pipe staging.',
+    category: 'Site Work',
+    image: '/images/dave_busters_aerial_1785361396248.jpg',
+    location: 'Tampa, FL',
+    date: 'February 2026'
   },
   {
     id: 'p3',
-    title: 'Hernando County Park Civil Prep',
-    description: 'Topsoil stripping, retention pond excavation, and structural grade work for new public park layouts.',
-    category: 'Site Work',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80',
-    location: 'State Road 50, Brooksville',
-    date: 'November 2025'
+    title: 'Precast Concrete Storm Manhole Installation',
+    description: 'Deep trench excavation and chain-hoist placement of heavy precast concrete drainage structures.',
+    category: 'Underground Pipe',
+    image: '/images/manhole_pipe_install_1785361413368.jpg',
+    location: 'Brooksville, FL',
+    date: 'January 2026'
   },
   {
     id: 'p4',
-    title: 'Sewer Bypass & Sanitary Tie-In',
-    description: 'Meticulous deep-trench sanitary pipe connections and compliance flow test sign-offs under live highway route.',
-    category: 'Underground Pipe',
-    image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80',
-    location: 'US-98 Bypass, Brooksville',
-    date: 'September 2025'
+    title: 'Aggregate Stockpiling & Lime Rock Processing',
+    description: 'High-volume conveyor stacking of crushed aggregate, screened fill dirt, and DOT lime rock.',
+    category: 'Material Sales',
+    image: '/images/sand_conveyor_pile_1785361446564.jpg',
+    location: 'Hernando County, FL',
+    date: 'December 2025'
   },
   {
     id: 'p5',
-    title: 'Lime Rock Delivery Subgrade',
-    description: 'Fast dispatch and tailgate spread of 120 loads of DOT approved aggregate for parking subbase grading.',
-    category: 'Material Sales',
-    image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80',
-    location: 'Cobb Road Warehouse, FL',
-    date: 'June 2025'
+    title: 'Brooksville Commercial Pad Base',
+    description: 'Mass earth excavation, structural stabilization, and base preparation for retail pad.',
+    category: 'Site Work',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80',
+    location: 'South Broad St, Brooksville',
+    date: 'November 2025'
   }
 ];
 

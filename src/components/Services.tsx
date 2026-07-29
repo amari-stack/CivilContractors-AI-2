@@ -19,7 +19,7 @@ const servicesData: Record<string, Service> = {
       'Erosion Control & Silt Fencing',
       'Mass Earthwork & Rough Grading'
     ],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
+    image: '/images/dave_busters_aerial_1785361396248.jpg',
     icon: 'hard-hat',
     details: 'Our Site Development team possesses the heavy horsepower and engineering precision required to turn raw Florida woodland into build-ready foundations. We handle tree removal, structural leveling, lime rock base layout, and full retention pond excavation. Operating a modern fleet equipped with automated grade controls, we guarantee the highest precision for drainage profiles and load-bearing requirements.',
     specs: [
@@ -40,7 +40,7 @@ const servicesData: Record<string, Service> = {
       'Gravity Sanitary Sewers',
       'Underground Fire Service Mains'
     ],
-    image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80',
+    image: '/images/manhole_pipe_install_1785361413368.jpg',
     icon: 'layers',
     details: 'Underground utility installation is our signature craft. We lay high-diameter concrete piping (RCP), PVC sewer installations, ductile iron water lines, and sanitary tie-ins. Our experienced pipe crew uses state-of-the-art pipe lasers and trench boxes to protect operators and ensure exact fall-rates. We have a solid record of compliance with Hernando County codes and Florida environmental mandates.',
     specs: [
@@ -61,7 +61,7 @@ const servicesData: Record<string, Service> = {
       '#57 Crushed Concrete / Granite',
       'Clean Structural Fill-Dirt'
     ],
-    image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=80',
+    image: '/images/sand_conveyor_pile_1785361446564.jpg',
     icon: 'truck',
     details: 'Need reliable heavy supplies delivered on-schedule? We sell and deliver premium Florida structural materials directly to your site or home. Whether you need aggregate for a driveway, clean fill-dirt for elevation leveling, or local lime rock for subgrade stabilization, we provide flexible truckloads (single axle, tandem, or semi-dumps) with prompt dispatch and clear volume billing.',
     specs: [

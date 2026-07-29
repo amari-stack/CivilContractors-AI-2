@@ -44,6 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <button onClick={() => onNavigate('pricing')}>PRICING ESTIMATOR</button>
               <button onClick={() => onNavigate('work')}>OUR WORK</button>
               <button onClick={() => onNavigate('contact')}>CONTACT / BOOK NOW</button>
+              <button onClick={() => onNavigate('faq')}>FAQ</button>
             </div>
           </div>
 
